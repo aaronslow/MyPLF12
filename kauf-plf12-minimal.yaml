@@ -128,7 +128,7 @@ switch:
     # relay output
   - platform: gpio
     id: relay
-    name: Switch
+    name:
     pin: $sub_relay_pin
     restore_mode: RESTORE_DEFAULT_ON
 
