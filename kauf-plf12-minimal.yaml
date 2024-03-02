@@ -97,7 +97,7 @@ binary_sensor:
     # https://esphome.io/components/binary_sensor/gpio.html
   - platform: gpio
     id: button
-    name: $friendly_name Button
+    name: Button
     pin:
       number: $sub_button_pin
       mode:
@@ -167,7 +167,7 @@ sensor:   # Power monitoring sensors output to Home Assistant
     model: $sub_hlw_model
 
     power:
-      name: ${friendly_name} Power
+      name: Power
       unit_of_measurement: W
       id: wattage
       filters:
@@ -176,7 +176,7 @@ sensor:   # Power monitoring sensors output to Home Assistant
             - $power_cal_val2_in -> $power_cal_val2_out
 
     current:
-      name: ${friendly_name} Current
+      name: Current
       unit_of_measurement: A
       id: current
       filters:
@@ -185,7 +185,7 @@ sensor:   # Power monitoring sensors output to Home Assistant
             - $current_cal_val2_in -> $current_cal_val2_out
 
     voltage:
-      name: ${friendly_name} Voltage
+      name: Voltage
       unit_of_measurement: V
       id: voltage
       filters:
@@ -196,7 +196,7 @@ sensor:   # Power monitoring sensors output to Home Assistant
     # Reports the total Power so-far each day, resets at midnight
     # https://esphome.io/components/sensor/total_daily_energy.html
   - platform: total_daily_energy
-    name: ${friendly_name} Total Daily Energy
+    name: Total Daily Energy
     power_id: wattage
     filters:
         - multiply: 0.001  ## convert Wh to kWh
