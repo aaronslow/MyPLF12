@@ -175,23 +175,23 @@ sensor:   # Power monitoring sensors output to Home Assistant
             - $power_cal_val1_in -> $power_cal_val1_out
             - $power_cal_val2_in -> $power_cal_val2_out
 
-    current:
-      name: Current
-      unit_of_measurement: A
-      id: current
-      filters:
-        - calibrate_linear:
-            - $current_cal_val1_in -> $current_cal_val1_out
-            - $current_cal_val2_in -> $current_cal_val2_out
+#    current:
+#      name: Current
+#      unit_of_measurement: A
+#      id: current
+#      filters:
+#        - calibrate_linear:
+#            - $current_cal_val1_in -> $current_cal_val1_out
+#            - $current_cal_val2_in -> $current_cal_val2_out
 
-    voltage:
-      name: Voltage
-      unit_of_measurement: V
-      id: voltage
-      filters:
-        - calibrate_linear:
-            - $voltage_cal_val1_in -> $voltage_cal_val1_out
-            - $voltage_cal_val2_in -> $voltage_cal_val2_out
+#    voltage:
+#      name: Voltage
+#      unit_of_measurement: V
+#      id: voltage
+#      filters:
+#        - calibrate_linear:
+#            - $voltage_cal_val1_in -> $voltage_cal_val1_out
+#            - $voltage_cal_val2_in -> $voltage_cal_val2_out
 
     # Reports the total Power so-far each day, resets at midnight
     # https://esphome.io/components/sensor/total_daily_energy.html
