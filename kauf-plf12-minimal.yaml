@@ -1,10 +1,10 @@
 # https://esphome.io/guides/configuration-types.html#substitutions
 substitutions:
 
-  name: kauf-plug              # **** CHANGE DEVICE NAME TO SOMETHING UNIQUE PER DEVICE.  RENAME YAML FILE TO SAME NAME.    ****
+  #name: kauf-plug              # **** CHANGE DEVICE NAME TO SOMETHING UNIQUE PER DEVICE.  RENAME YAML FILE TO SAME NAME.    ****
                                # **** USE DASHES (-) INSTEAD OF SPACES OR UNDERSCORE (_).  USE ONLY LOWER CASE LETTERS.     ****
 
-  friendly_name: Kauf Plug     # **** CHANGE FRIENDLY NAME TO SOMETHING UNIQUE PER DEVICE ****
+  #friendly_name: Kauf Plug     # **** CHANGE FRIENDLY NAME TO SOMETHING UNIQUE PER DEVICE ****
 
   # substitutions for power monitoring calibration.  Allows end users to change calibration in their yaml and still
   # incorporate this file as a package to get all the updates we release.
@@ -128,7 +128,7 @@ switch:
     # relay output
   - platform: gpio
     id: relay
-    name:
+    name: Switch
     pin: $sub_relay_pin
     restore_mode: RESTORE_DEFAULT_ON
 
